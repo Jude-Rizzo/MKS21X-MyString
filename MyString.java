@@ -68,6 +68,12 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
   }
 
   public String toString(){
+    //just go through data and put it into a String
+    String ans = "";
+    for(int i = 0; i < data.length; i++){
+    ans += data[i];
+  }
+  return ans;
 
   }
 
