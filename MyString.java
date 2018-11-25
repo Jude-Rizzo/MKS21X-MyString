@@ -8,6 +8,9 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
   }
 
   public char charAt(int i){
+    if(i < 0 || i >= data.length){
+      throw new IndexOutOfBoundsException();
+    }
       return data[i];
   }
 
@@ -17,7 +20,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
 
   public CharSequence subSequence(int s, int l){
     for(int i = s; i < l; i++){
-      
+
     }
   }
 
