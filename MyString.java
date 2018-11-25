@@ -19,9 +19,11 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
   }
 
   public CharSequence subSequence(int s, int l){
+    String ans = "";
     for(int i = s; i < l; i++){
-
+    ans += data[i];
     }
+    return ans;
   }
 
   public int compareTo(CharSequence T){
