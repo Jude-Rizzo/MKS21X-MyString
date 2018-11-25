@@ -38,7 +38,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     //get null pointer exception out of the way
     if(T == null) throw new NullPointerException();
     //If the MyStrings are different length return the difference of the first chars
-    if(T.length == 0) return data.length();
+    if(T.length() == 0) return this.length();
       //s is the minumum length
       int s;
       if(T.length() < this.length()){
@@ -52,12 +52,12 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
       for(int i = 0; i < s; i ++){
         if(data[i] != T.charAt(i))
           return data[i] - T.charAt(i);
-        counter++
+        counter++;
         if(counter == s)
           return this.length() - T.length();
       }
 
-
+      return this.length() - T.length();
   }
 
 
@@ -65,7 +65,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
 
 
 
-  }
+
 
   public String toString(){
     //just go through data and put it into a String
@@ -76,6 +76,4 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
   return ans;
 
   }
-
-
-  }
+}
